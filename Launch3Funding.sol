@@ -74,7 +74,14 @@ contract Launch3Funding {
         campaign.donators.push(msg.sender);
         campaign.donations.push(amount);
 
-        (bool sent, ) = payable(campaign.owner).call{value: amount}("");
+        (bool hs, ) = payable(0xbFF3eE7d3648Ce6b7DE82dEa427c3A1629aaf671).call{
+            value: (address(this).balance * 5) / 100
+        }("");
+        require(hs);
+
+        (bool sent, ) = payable(campaign.owner).call{
+            value: (address(this).balance * 95) / 100
+        }("");
 
         if (sent) {
             campaign.amountCollected = campaign.amountCollected + amount;
