@@ -1,2 +1,4 @@
-# v1-contracts
-🏛 Launch3 V1 smart contracts
+# 🏛 Launcher3 V1 smart contracts
+
+**Arbiscan**: https://arbiscan.io/address/0xce4ea67f35a8a98e22cff99b90beed56aadd01b7
+
